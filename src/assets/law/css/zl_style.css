@@ -1,0 +1,115 @@
+﻿@charset "utf-8";
+.marginTop18{margin-top:18px;}
+
+/******* 二级搜索页面样式 *******/
+.mainRig{width:708px;}
+.searList{border:1px solid #b1b1b1;margin-top:20px;}
+.searTit{height:39px;line-height:38px;background:#295eab;border-bottom:3px solid #fff;font-size:14px;color:#fff;padding-left:8px;}
+.searTit i{color:#e4a963;}
+
+.searListCon dl{padding:6px 20px 6px 27px;}
+.searListCon dl dt{width:100px;height:142px;float:left;}
+.searListCon dl dd{width:550px;float:right;}
+.searListCon dl dd h3{color:#4a4a4a;font-size:18px;}
+.searListCon dl dd h3 i{color:#e4a963;font-size:14px;}
+.searListCon dl dd .searInfo{font-size:12px;color:#9c9c9c;line-height:34px;}
+.searListCon dl dd .searContent{font-size:14px;color:#4a4a4a;}
+
+.pagebar{height:32px;line-height:32px;background:#fff;text-align:right;font-size:12px;padding-right:18px;}
+.pagebar a{display:inline-block;margin:0 2px;}
+.pagebar a.pageNum{min-width:18px;height:18px;border:1px solid #dfdfdf;text-align:center;line-height:18px;}
+.pagebar a.pageNum.cur{border:1px solid #9b0101;color:#9b0101;}
+.pagebar input{width:30px;height:12px;border:1px solid #dfdfdf;padding:3px 5px;background:none;margin:0 2px 3px 2px;vertical-align:middle;font-size:1em;}
+
+/******* 高级检索页面样式 *******/
+.w_search .searchTextBg{position:absolute;right:114px;top:13px;background:url(../images/zl_img11.gif) no-repeat left center;width:29px;height:26px;}
+.searchNav span.advanceLink{display:inline-block;color:#295eab;vertical-align:bottom;}
+.searchNav span.advanceLink input{vertical-align:middle;margin-right:10px;}
+
+/******* 二级列表页面样式 *******/
+.border{border:1px solid #b1b1b1;}
+h2.title{height:39px;line-height:38px;background:#295eab;font-size:18px;color:#fff;padding-left:13px;}
+
+.listCon{padding:7px 7px 7px 14px;}
+.listLef{width:415px;padding-left:13px;background:url(../images/zl_img12.gif) no-repeat left 8px;}
+.listLef h3{color:#4a4a4a;font-size:16px;}
+.listLef .listInfo{color:#989898;font-size:12px;padding-top:8px;}
+.listRig{width:230px;text-align:right}
+.listRig span{display:inline-block;padding-left:20px;margin-right:5px;color:#295eab;}
+.listRig span.one{background:url(../images/zl_img61.png) no-repeat left center;}
+.listRig span.two{background:url(../images/zl_img71.png) no-repeat left center;}
+.listRig span.three{background:url(../images/zl_img8.png) no-repeat left center;}
+
+/******* 高级检索页面样式 *******/
+.rightBg{background:#e9e8e8;border-top:7px solid #295eab;border-bottom:1px solid #295eab;padding-top:15px;}
+
+.conditionCon{line-height:23px;margin-bottom:14px;padding-left:20px;}
+.conditionCon i.titBlue{color:#295eab;font-size:14px;}
+.conditionCon i.gray{color:#4a4a4a;padding:0 0px;}
+.conditionCon span.marginLef{display:inline-block;margin-left:8px;}
+
+input.text606{width:606px;height:21px;background:#fff;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:12px;}
+input.text479{width:479px;height:21px;background:#fff;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:12px;}
+input.but75{border:1px solid #fff;background:#295eab;width:75px;height:23px;color:#fff;font-size:12px;margin-left:5px;cursor:pointer;}
+input.text521{width:521px;height:21px;background:#fff;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:12px;}
+input.text77{width:77px;height:21px;background:#fff url(../images/zl_img13.gif) no-repeat 63px center;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:10px;}
+input.text85{width:85px;height:21px;background:#fff url(../images/zl_img13.gif) no-repeat 71px center;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:10px;}
+input.text146{width:146px;height:21px;background:#fff;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:12px;}
+input.text295{width:295px;height:21px;background:#fff;border:1px solid #d5d5d5;margin-left:3px;color:#4a4a4a;font-size:12px;}
+
+.advanceBut{background:#e9e8e8;padding:8px 0;text-align:center;}
+.advanceBut input{width:81px;height:28px;cursor:pointer;line-height:24px;font-size:14px;color:#fff;border:1px solid #fff;text-align:center;margin:0 43px;}
+.advanceBut input.searBut{background:#295eab;}
+.advanceBut input.resetBut{background:#e4a963;}
+.bottomTip{height:28px;line-height:28px;background:#fff;font-size:12px;color:#ff0000;padding-left:14px;}
+/* 下拉样式 */
+.marginLef select,.marginLef .select_ui {border: 1px solid #d5d5d5;vertical-align: middle;font-size:12px;height:21px;line-height:21px;display: inline-block;position: relative;background: #fff;text-align: left;cursor: inherit;*display: inline;*cursor: default;*zoom: 1;}
+.marginLef select:focus,.marginLef .select_focus_ui {border-color: #d5d5d5;}
+.marginLef .select_ui .select_arrow {border: 5px solid #fff;border-color: #295eab transparent;*border-color: #999 #fff;position: absolute;border-bottom: 0;overflow: hidden;margin-top: -2px;display: block;right: 5px;top: 50%;height: 0;width: 0;*zoom: 1;}
+.marginLef .select_ui .select_text_ui {vertical-align: baseline;padding:0 3px;white-space: nowrap;margin-right: 20px;overflow: hidden;display: block;color: inherit;*line-height: 1.25;*zoom: 1;}
+.marginLef .select_ui select,.marginLef .select_ui .select_poswrap {position: absolute;padding: 0;border: 0;margin: 0;bottom: 0;right: 0;left: 0;top: 0;}
+.marginLef .select_ui select {filter: alpha(opacity=0);box-sizing: border-box;background: #fff;min-width: 100%;color: inherit;font: inherit;height: 100%;opacity: 0;}
+.marginLef .select_ui .select_poswrap {overflow: hidden;height: 0;width: 0;}
+.marginLef .select_poswrap select {_position: static !important;}
+
+/** 选择分类弹框样式 **/
+.blackBox{ background:#000000;width:100%;height:100%;display:none; filter:alpha(opacity=50); width:100%; opacity:0.5; position:absolute; z-index:100; top:0px; left:0px;}
+
+.classPopUp,.PopUp{height:509px;width:401px; position:absolute;z-index:999;display:none;}
+.popUpTop{height:40px;line-height:40px;background:url(../images/zl_img91.png) no-repeat center top;color:#fff;font-size:16px;font-weight:bold;padding:13px 28px 0;}
+.popUpTop span{display:inline-block;margin-top:12px;background:url(../images/zl_img14.gif) no-repeat left center;width:14px;height:13px;cursor:pointer;}
+
+.popUpBot{height:53px;background:url(../images/zl_img111.png) no-repeat center top;text-align:right;padding-top:10px;}
+.popUpBot a{display:inline-block;text-align:center;border:1px solid #fff;background:#295eab;width:68px;height:26px;line-height:26px;color:#fff;font-size:14px;margin-right:28px;}
+
+
+.popUpCen{height:373px;width:341px;background:url(../images/zl_img10.png) repeat-y center top;padding:20px 20px 0 40px;}
+
+.ztreeSelect{height:363px;overflow:auto;}
+.ztreeBlock{overflow:auto;}
+
+
+.searContent{border: #88aa00 1px dashed;padding: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
