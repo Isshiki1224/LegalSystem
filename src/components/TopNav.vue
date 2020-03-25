@@ -5,8 +5,8 @@
         <div class="header-left">
           <img src="../assets/picture/logo.png">
           <div class="company-name">
-            <p>南京创同环境科技有限公司</p>
-            <p>Nanjing chuangtong environmental technology co., LTD</p>
+            <p>中交安科（南京）安全咨询有限公司</p>
+            <p>zhongjiaoanke  Security consulting co., LTD</p>
           </div>
         </div>
         <div class="header-right">
@@ -67,7 +67,7 @@
     <div class="footer">
       <div class="footer-nav w11">
         <div class="footer-left">
-          <h3>创同环境</h3>
+          <h3>中交安科</h3>
           <div class="footer-list">
             <dl>
               <dt>
@@ -80,7 +80,7 @@
             <dl>
               <dt><router-link to="/serviceNav">服务领域</router-link></dt>
               <dd v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link to="">{{item.name}}</router-link>
+                <router-link to="serviceNav">{{item.name}}</router-link>
               </dd>
 
             </dl>
@@ -92,8 +92,8 @@
             </dl>
             <dl>
               <dt><router-link to="/caseNav">服务案例</router-link></dt>
-              <dd v-for="item in caseObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link :to="{ path: item.path }">{{item.name}}</router-link>
+              <dd v-for="item in caseObj" :key="item.id" @click="getChildClass(item.id)">
+                <router-link to="/caseNav">{{item.name}}</router-link>
               </dd>
             </dl>
 
@@ -101,7 +101,7 @@
         </div>
         <div class="footer-right">
           <img class="footer-logo" src="../assets/picture/logo.png">
-          <p>公司地址：<span>南京市鼓楼区汉中门大街303号D座5楼</span></p>
+          <p>公司地址：<span>南京市栖霞区兴智科技园A座13楼</span></p>
           <p>招聘热线：<span>025-52316787</span>、<span>13585118072</span></p>
           <p>合作热线：<span>025-52336878</span>、<span>18914580001</span></p>
           <p>备案号：<span>苏ICP备19001203号-1</span></p>

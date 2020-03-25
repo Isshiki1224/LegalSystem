@@ -14,6 +14,7 @@ import news1 from '../components/news/news1.vue'
 import content from '../components/content/content.vue'
 import caseNav from '../components/case/caseNav.vue'
 import legalSearch from '../components/legal/legalSearch.vue'
+import legalDetail from '../components/legal/legalDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,7 @@ path: '/', redirect: '/topNav'
   component: TopNav, 
   redirect: '/index', 
   children: [
+             { path: '/legalDetail', component: legalDetail }, 
              { path: '/legalSearch', component: legalSearch }, 
              { path: '/caseNav', component: caseNav }, 
              { path: '/content', component: content }, 
