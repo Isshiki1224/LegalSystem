@@ -2,11 +2,10 @@
   <div>
     <div class="main pageWidth" v-for="(item,index) in allLegals" :key="index"
       :class="{ current : item.id == currentId }">
-      <div class="mainCon clearself">
-        <div class="mainRig fr">
+    
+      <div class="mainCon clearself" style="display: flex;">
+        <div class="mainRig fr" style="flex: 1">
           <div class="w_bC">
-            <div class="w_d_title clearself">
-            </div>
             <div class="detailCon">
               <div class="conTit">{{item.title}}</div>
               <table class="d_infor" style="margin: auto;">
@@ -36,9 +35,9 @@
                 <hr>
                 <div v-for="(term,index) in item.terms" :key="index">                 
 
-                  <p id="154709776367300" class='textAlignCenter' style="font-size:1.2em;padding-bottom:20px">
+                  <p id="154709776367300" class='textAlignCenter' style="font-size:1.2em;padding-bottom:5px">
                     {{term.chapterContent}}</p>
-                  <p id="154709776367300" class='textAlignCenter' style="font-size:1.2em;padding-bottom:20px">
+                  <p id="154709776367300" class='textAlignCenter' style="font-size:1.2em;padding-bottom:5px">
                     {{term.sectionContent}}</p>
 
                   <table border=0>

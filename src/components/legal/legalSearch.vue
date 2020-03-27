@@ -49,8 +49,11 @@
                         <h3 style="width: 100%;">
                           <router-link :to="{path: '/legalDetail', query: { id: item.id }}">{{item.title}}</router-link>
                         </h3>
-                        <div class="searInfo">发布部门: {{item.office}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布时间:
-                          {{item.publicDate}}
+                        <div class="searInfo">
+                          <span style="margin: 10px;">发布部门: {{item.office}}</span>
+                          <span style="margin: 10px;">发布时间:{{item.publicDate}}</span>
+                          <span style="margin: 10px;">施行时间:{{item.executeDate}}</span>
+                          <span style="margin: 10px;">门类: {{item.category}}</span>
                         </div>
                       </td>
                     </tr>

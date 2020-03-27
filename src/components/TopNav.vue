@@ -102,8 +102,8 @@
         <div class="footer-right">
           <img class="footer-logo" src="../assets/picture/logo.png">
           <p>公司地址：<span>南京市栖霞区兴智科技园A座13楼</span></p>
-          <p>招聘热线：<span>025-52316787</span>、<span>13585118072</span></p>
-          <p>合作热线：<span>025-52336878</span>、<span>18914580001</span></p>
+          <p>招聘热线：<span>025-52316787</span>、<span>18013839120</span></p>
+          <p>合作热线：<span>025-52336878</span>、<span>18013839120</span></p>
           <p>备案号：<span>苏ICP备19001203号-1</span></p>
           <img class="ewm" src="../assets/picture/ewm.png">
         </div>

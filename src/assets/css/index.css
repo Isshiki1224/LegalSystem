@@ -320,7 +320,7 @@ a{ text-decoration:none;color:#333;}
 .content-nav{zoom: 1;}
 .content-nav:after{display: block;content: "";clear: both;}
 .content-left{float: left;width: 70%;}
-.content-right{float: left;width: 30%;height: 560px; background: #6dbce9;color: #FFFFFF;}
+.content-right{float: left;width: 30%;height: 560px; background: #FFFFF;color: black;}
 .content-right h3{margin-top: 90px;padding-left:15%; font-size: 24px;font-weight: bold;margin-bottom: 38px;}
 .content-right p{font-size: 16px;padding-left:15%; margin-bottom: 30px;}
 .content-right img{display: block;margin: 0 auto;}
