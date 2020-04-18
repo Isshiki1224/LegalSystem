@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './plugins/element.js'
-
+import 'bootstrap'
 import axios from 'axios'
 
 import BaiduMap from 'vue-baidu-map'
@@ -12,7 +11,7 @@ import BaiduMap from 'vue-baidu-map'
           ak: '4Wdhtd74HWQuVKmtoH01dtlmd14UWsi8'
     })
 
-axios.defaults.baseURL = 'http://localhost:8081'
+axios.defaults.baseURL = 'http://40.73.72.56:1311/nacos-provide'
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false

@@ -116,8 +116,7 @@
       this.getLegalList()
     },
     methods: {
-      getClass(index) {
-        console.log(index)
+      getClass(index) {    
         this.queryInfo.kind = index
       },
       async getLegalList() {
@@ -130,8 +129,6 @@
           } = await this.$http.get('SearchLawTitle', {
             params: this.queryInfo
           })
-          console.log(res)
-          console.log(res.date[0].id)
           this.legalList = res.date
           this.total = res.totalPage
         }
@@ -145,7 +142,7 @@
           } = await this.$http.get('SearchLaw', {
             params: this.queryInfo
           })
-          console.log(res1)
+          
           this.legalList = res1.date
           this.total = res1.totalPage
         }

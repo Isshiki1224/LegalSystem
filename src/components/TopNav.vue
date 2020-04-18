@@ -6,13 +6,13 @@
           <img src="../assets/picture/logo.png">
           <div class="company-name">
             <p>中交安科（南京）安全咨询有限公司</p>
-            <p>zhongjiaoanke  Security consulting co., LTD</p>
+            <p>ChinaTrans  Safety Consulting (Nanjing) Co., Ltd</p>
           </div>
         </div>
         <div class="header-right">
           <ul>
             <li>
-              <router-link to="/index" exact>首页</router-link>
+              <router-link to="/index">首页</router-link>
             </li>
             <li id="about" @mouseenter="enter1" @mouseleave="leave1">
               <router-link to="/aboutNav">关于我们</router-link>
@@ -25,7 +25,7 @@
               </div>
             </li>
             <li id="ser" @mouseenter="enter2" @mouseleave="leave2">
-                <router-link to="/serviceNav">服务领域</router-link>
+              <router-link to="/serviceNav">解决方案</router-link>
               <div id="subnav1" v-bind:style='displayStyle2'>
                 <div class="sub2">
                   <dl v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
@@ -35,28 +35,24 @@
               </div>
             </li>
             <li id="news" @mouseenter="enter3" @mouseleave="leave3">
-                <router-link to="/newsNav">新闻中心</router-link>
+              <router-link to="/newsNav">新闻中心</router-link>
               <div id="subnav2" v-bind:style='displayStyle3'>
                 <div class="sub2">
-                    <dl v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
-                        <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-                      </dl>
-                </div>
-              </div>
-            </li>
-            <li id="case" @mouseenter="enter4" @mouseleave="leave4">
-                <router-link to="/caseNav">服务案例</router-link>
-              <div id="subnav3" v-bind:style='displayStyle4'>
-                <div class="sub2">
-                  <dl v-for="item in caseObj" :key="item.id" @click="getChildClass(item.id)">
-                    <router-link to="/caseNav">{{item.name}}</router-link>
+                  <dl v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
+                    <router-link :to="{ path: item.path }">{{item.name}}</router-link>
                   </dl>
                 </div>
               </div>
             </li>
-            <li id="hr"><router-link to="/legalSearch">法律法规</router-link>
+            <li id="case">
+              <router-link to="/caseNav">典型项目</router-link>
             </li>
-            <li><router-link to="/content">联系我们</router-link></li>
+            <li id="hr">
+              <router-link to="/legalSearch">法律法规</router-link>
+            </li>
+            <li>
+              <router-link to="/content">联系我们</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -78,33 +74,31 @@
               </dd>
             </dl>
             <dl>
-              <dt><router-link to="/serviceNav">服务领域</router-link></dt>
+              <dt>
+                <router-link to="/serviceNav">解决方案</router-link>
+              </dt>
               <dd v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
                 <router-link to="serviceNav">{{item.name}}</router-link>
               </dd>
 
             </dl>
             <dl>
-              <dt><router-link to="/newsNav">新闻中心</router-link></dt>
+              <dt>
+                <router-link to="/newsNav">新闻中心</router-link>
+              </dt>
               <dd v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
                 <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-              </dd>
-            </dl>
-            <dl>
-              <dt><router-link to="/caseNav">服务案例</router-link></dt>
-              <dd v-for="item in caseObj" :key="item.id" @click="getChildClass(item.id)">
-                <router-link to="/caseNav">{{item.name}}</router-link>
               </dd>
             </dl>
 
           </div>
         </div>
         <div class="footer-right">
-          <img class="footer-logo" src="../assets/picture/logo.png">
+          <img class="footer-logo" src="../assets/picture/logo.png" width="251" height="71">
           <p>公司地址：<span>南京市栖霞区兴智科技园A座13楼</span></p>
-          <p>招聘热线：<span>025-52316787</span>、<span>18013839120</span></p>
-          <p>合作热线：<span>025-52336878</span>、<span>18013839120</span></p>
-          <p>备案号：<span>苏ICP备19001203号-1</span></p>
+          <p>招聘热线：<span>18013839120</span></p>
+          <p>合作热线：<span>18013839120</span></p>
+          <p>备案号：<span></span></p>
           <img class="ewm" src="../assets/picture/ewm.png">
         </div>
       </div>
@@ -124,9 +118,6 @@
           display: 'none'
         },
         displayStyle3: {
-          display: 'none'
-        },
-        displayStyle4: {
           display: 'none'
         },
         aboutObj: [{
@@ -149,39 +140,29 @@
         serviceObj: [{
             id: 0,
             path: '/service-0',
-            name: '生态环境'
+            name: '风险评估'
           },
           {
             id: 1,
             path: '/service-1',
-            name: '风险与应急'
+            name: '安全研究'
           },
           {
             id: 2,
             path: '/service-2',
-            name: '节能低碳'
+            name: '咨询服务'
           },
           {
             id: 3,
             path: '/service-3',
-            name: '循环经济'
+            name: '应急咨询'
           },
           {
             id: 4,
             path: '/service-4',
-            name: '能源管理'
-          },
-          {
-            id: 5,
-            path: '/service-5',
-            name: '自然资源'
-          },
-          {
-            id: 6,
-            path: '/service-6',
-            name: '其他'
+            name: '软件开发'
           }
-        ], 
+        ],
         newsObj: [{
             id: 0,
             path: '/news2',
@@ -192,43 +173,7 @@
             path: '/news1',
             name: '企业新闻'
           }
-        ], 
-        caseObj: [{
-              id: 0,
-              path: '/case3',
-              name: '生态环境'
-            },
-            {
-              id: 1,
-              path: '/case4',
-              name: '风险与应急'
-            },
-            {
-              id: 2,
-              path: '/case5',
-              name: '节能低碳'
-            },
-            {
-              id: 3,
-              path: '/case6',
-              name: '循环经济'
-            },
-            {
-              id: 4,
-              path: '/case7',
-              name: '能源管理'
-            },
-            {
-              id: 5,
-              path: '/case8',
-              name: '自然资源'
-            },
-            {
-              id: 6,
-              path: '/case9',
-              name: '其他'
-            }
-          ]
+        ]
       }
     },
     methods: {
@@ -249,12 +194,6 @@
       },
       leave3: function () {
         this.displayStyle3.display = 'none'
-      },
-      enter4: function () {
-        this.displayStyle4.display = 'block'
-      },
-      leave4: function () {
-        this.displayStyle4.display = 'none'
       },
       getChildClass: function (index) {
         this.$refs.child.getClass(index)

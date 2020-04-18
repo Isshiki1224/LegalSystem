@@ -37,7 +37,6 @@
     },
     methods: {
       getClass: function (index) {
-        console.log(index)
         this.current = index
       }
     }
