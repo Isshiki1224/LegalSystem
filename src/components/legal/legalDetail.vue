@@ -43,9 +43,9 @@
                   <table border=0>
                     <tr valign=top>
                       <td nowrap v-if="term.itemContent !== ''">{{term.itemContent}}</td>
-                      <td nowrap v-if="term.itemId <= 10 && term.itemId > 0 && term.itemContent === ''" style="width: 54px;height: 58px;"></td>
-                      <td nowrap v-if="((term.itemId <= 20 && term.itemId > 10) || term.itemId === 30 || term.itemId === 40 || term.itemId === 50 || term.itemId === 60 || term.itemId === 70 || term.itemId === 80 || term.itemId === 90 || term.itemId === 100) && term.itemContent === ''" style="width: 72px;"></td>
-                      <td nowrap v-if="term.itemId < 100 && term.itemId > 20 && term.itemId !== 30 && term.itemId !== 40 && term.itemId !== 50 && term.itemId !== 60 && term.itemId !== 70 && term.itemId !== 80 && term.itemId !== 90 && term.itemId !== 100 && term.itemContent === ''" style="width: 90px;"></td>
+                      <td nowrap v-if="term.itemId <= 10 && term.itemId > 0 && term.itemContent === ''" style="width: 45px;"></td>
+                      <td nowrap v-if="((term.itemId <= 20 && term.itemId > 10) || term.itemId === 30 || term.itemId === 40 || term.itemId === 50 || term.itemId === 60 || term.itemId === 70 || term.itemId === 80 || term.itemId === 90 || term.itemId === 100) && term.itemContent === ''" style="width: 60px;"></td>
+                      <td nowrap v-if="term.itemId < 100 && term.itemId > 20 && term.itemId !== 30 && term.itemId !== 40 && term.itemId !== 50 && term.itemId !== 60 && term.itemId !== 70 && term.itemId !== 80 && term.itemId !== 90 && term.itemId !== 100 && term.itemContent === ''" style="width: 75px;"></td>
                       <td nowrap v-if="term.itemId <= 1000 && term.itemId > 100 && term.itemContent === ''" style="width: 108px;"></td>
                       <td>
                         <p style="text-indent:2em;" v-if="term.itemId <= 10 && term.itemId > 0 && term.itemContent === ''"> {{term.content}}</p>

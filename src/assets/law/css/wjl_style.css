@@ -41,8 +41,8 @@
 .conList li.width60{ width:60%;}
 .conList li span{ color:#e4a963;font-size:12px; display:inline-block;margin-right:5px;}
 
-.detailCon .con{ padding:25px 20px 55px;font-size:18px;}
-.detailCon .con table{margin:15px 0;}
+.detailCon .con{ padding:25px 20px 55px;font-size:15px;}
+.detailCon .con table{margin:5px 0;}
 .detailCon .con table p{word-wrap:break-word;margin-bottom:10px;}
 .detailCon .con p{word-wrap:break-word;margin-bottom:15px;}
 .textAlignCenter{ text-align:center;}

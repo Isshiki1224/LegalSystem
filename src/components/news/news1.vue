@@ -19,13 +19,13 @@
             </router-link>
           </li>
         </ul>
-        <div class="s-page wow fadeInDown" data-wow-duration="1s">
+        <!-- <div class="s-page wow fadeInDown" data-wow-duration="1s">
           <div class="page" style="width:100%;text-align:center;">
             <el-pagination class="page" @current-change="handleCurrentChange" :current-page="currentPage"
               :page-size="8" layout="total,  prev, pager, next, jumper" :total="news1List.length">
             </el-pagination>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </template>

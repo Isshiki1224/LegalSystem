@@ -4,11 +4,11 @@
       <div class="bd">
         <ul>
           <li>
-            <img src="../assets/picture/banner3.jpg">
+            <img src="../assets/picture/banner5.jpg">
             <div class="b-t">
               <div class="banner-title"></div>
               <div class="banner-title1">
-                <p>CREATIVE THINKING</p>
+                <p></p>
                 <p>专业 融合 创新 共赢</p>
               </div>
             </div>
@@ -181,25 +181,8 @@
           path: 'projectDetail',
           src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
           content: '1、航道、船闸运行安全监督第三方检查'
-        },
-        {
-          id: 1,
-          path: 'projectDetail',
-          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
-          content: '1、航道、船闸运行安全监督第四方检查'
-        },
-        {
-          id: 2,
-          path: 'projectDetail',
-          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
-          content: '1、航道、船闸运行安全监督第五方检查'
-        },
-        {
-          id: 3,
-          path: 'projectDetail',
-          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
-          content: '1、航道、船闸运行安全监督第六方检查'
-        }]
+        }
+        ]
       }
     }
   }
