@@ -87,7 +87,19 @@
     </div>
     <div class="results">
       <div class="results-nav w11">
-        <div class="results-left wow fadeInLeft" data-wow-duration="2s">
+        <h3>典型项目</h3>
+        <div>
+          <el-carousel :interval="4000" type="card" height="200px" indicator-position="none">
+            <el-carousel-item v-for="item in projectObj" :key="item.id">
+              <router-link :to="{path: item.path}">
+                <img :src="item.src" width="100%" height="80%">
+                <p>{{item.content}}</p>
+              </router-link>
+            </el-carousel-item>
+          </el-carousel>
+          <router-link to="/caseNav" class="vedio-more">典型项目</router-link>
+        </div>
+        <!-- <div class="results-left wow fadeInLeft" data-wow-duration="2s">
           <h3>典型项目</h3>
           <span>results</span>
           <p>
@@ -106,7 +118,7 @@
                   </router-link>
                 </li>
 
-                <!-- <li>
+                <li>
                   <a href="detail-217_9.html">
                     <span style="display: none;" class="results-date">2019-04-08</span>
                     <p class="results-title">2、国家新型工业化产业示范基地申报</p>
@@ -118,12 +130,12 @@
                     <span style="display: none;" class="results-date">2019-04-08</span>
                     <p class="results-title">3、国家小型微型企业创业创新示范基地申报</p>
                   </a>
-                </li> -->
+                </li>
 
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -136,34 +148,58 @@
         serviceObj: [{
             id: 0,
             path: '/service-0',
-            src: require('../assets/picture/fw1.png'), 
+            src: require('../assets/picture/fw1.png'),
             name: '风险评估'
           },
           {
             id: 1,
             path: '/service-1',
-            src: require('../assets/picture/fw2.png'), 
+            src: require('../assets/picture/fw2.png'),
             name: '安全研究'
           },
           {
             id: 2,
             path: '/service-2',
-            src: require('../assets/picture/fw3.png'), 
+            src: require('../assets/picture/fw3.png'),
             name: '咨询服务'
           },
           {
             id: 3,
             path: '/service-3',
-            src: require('../assets/picture/fw4.png'), 
+            src: require('../assets/picture/fw4.png'),
             name: '应急咨询'
           },
           {
             id: 4,
             path: '/service-4',
-            src: require('../assets/picture/fw5.png'), 
+            src: require('../assets/picture/fw5.png'),
             name: '软件开发'
           }
-        ]
+        ],
+        projectObj: [{
+          id: 0,
+          path: 'projectDetail',
+          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
+          content: '1、航道、船闸运行安全监督第三方检查'
+        },
+        {
+          id: 1,
+          path: 'projectDetail',
+          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
+          content: '1、航道、船闸运行安全监督第四方检查'
+        },
+        {
+          id: 2,
+          path: 'projectDetail',
+          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
+          content: '1、航道、船闸运行安全监督第五方检查'
+        },
+        {
+          id: 3,
+          path: 'projectDetail',
+          src: require('../assets/uploadfile/2017/1222/20171222015226712.jpg'),
+          content: '1、航道、船闸运行安全监督第六方检查'
+        }]
       }
     }
   }
@@ -171,4 +207,47 @@
 </script>
 
 <style lang="less" scoped>
+  .results-nav h3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  /* .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  } */
+
+  .results {
+    margin-bottom: 15px;
+  }
+
+  .el-carousel {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .vedio-more{
+    font-size: 16px;
+    color: #777;
+    padding: 10px 0;
+    border: 2px solid #777;
+    display: block;
+    margin:0px auto 0;
+    text-align:center;
+    width:188px;clear:both;
+  }
+
 </style>

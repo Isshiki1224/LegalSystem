@@ -6,7 +6,7 @@
           <img src="../assets/picture/logo.png">
           <div class="company-name">
             <p>中交安科（南京）安全咨询有限公司</p>
-            <p>ChinaTrans  Safety Consulting (Nanjing) Co., Ltd</p>
+            <p>ChinaTrans Safety Consulting (Nanjing) Co., Ltd</p>
           </div>
         </div>
         <div class="header-right">
@@ -60,7 +60,29 @@
     <div class="main">
       <router-view ref="child"></router-view>
     </div>
-    <div class="footer">
+    <!--底部-->
+    <div class="footer hidden-xs">
+      <div class="row ft-box">
+        <div class="col-md-6 col-sm-6 ft-left">
+          <a href="">公司地图</a>
+          <a href="">法律声明</a>
+          <a href="">联系方式</a>
+          <a href="">举报热线</a>
+          <p>备案号:
+            <a href="javascript:window.open('http://beian.miit.gov.cn/');" target="_blank">苏ICP备20020409号</a></p>
+        </div>
+        <div class="col-md-3 col-sm-3 ft-tel">
+          <img src="../assets/statics/images/ft-tel.png" class="fl img-responsive">
+          <div class="fl">联系电话：<br>18013839102</div>
+        </div>
+        <div class="col-md-3 col-sm-3 ft-lefter">
+          <img src="../assets/picture/logo.png"><br> </div>
+        <div class="col-md-3 col-sm-3 ft-righter">
+          <img src="../assets/picture/ewm.png"><br> </div>
+      </div>
+
+    </div>
+    <!-- <div class="footer">
       <div class="footer-nav w11">
         <div class="footer-left">
           <h3>中交安科</h3>
@@ -102,7 +124,7 @@
           <img class="ewm" src="../assets/picture/ewm.png">
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -204,5 +226,78 @@
 </script>
 
 <style lang="less" scoped>
+  .footer {
+    background: #efefef;
+    padding: 50px 0;
+    clear: both;
+
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ft-tel{
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer .ft-box {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .ft-tel img {
+    width: 65px !important;
+  }
+
+  .ft-left img {
+    width: 129px !important;
+  }
+  .ft-lefter img {
+    width: 129px !important;
+  }
+
+  .ft-righter img {
+    width: 70px !important;
+  }
+
+  .ft-righter{
+    margin-left: 15px;
+  }
+  .ft-lefter{
+    margin-left: 15px;
+    padding-top: 15px;
+  }
+
+  .footer .ft-box a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  .footer .ft-box p {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0 0;
+  }
+
+  .ft-tel {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    padding: 0;
+    border-right: 1px solid #919191;
+  }
+
+  .ft-tel div {
+    margin-left: 15px;
+    padding: 6px 0 0;
+  }
+  .ft-left{
+    padding-top: 15px;
+  }
 
 </style>

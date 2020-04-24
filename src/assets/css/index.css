@@ -152,8 +152,8 @@ a{ text-decoration:none;color:#333;}
 .picScroll-left .bd ul li:hover .dynamic-message-nav>h4{color: #6dbce9;}
 .picScroll-left .bd ul li:hover .dynamic-message-nav>p{color: #6dbce9;}
 
-
-.results{background: url(../image/bg2.jpg) no-repeat;background-size: 100% 100%;}
+/*background: url(../image/bg2.jpg) no-repeat;*/
+.results{background-size: 100% 100%;}
 .results-nav{zoom: 1;}
 .results-nav:after{display: block;content: "";clear: both;}
 .results-left{float: left;width: 40%;padding-right: 10%;padding-top: 90px;padding-bottom: 160px;}
