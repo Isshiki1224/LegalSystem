@@ -66,13 +66,13 @@ a{ text-decoration:none;color:#333;}
 .slideBox .hd ul li{ display: inline-block;margin-right:15px;  width:40px; height:2px; background:#fff; opacity: 0.5;cursor:pointer;}
 .slideBox .hd ul li.on{ opacity: 1;}
 
-.b-t{position: absolute;z-index: 10;width: 510px;height: 510px;left: 50%;top: 50%;margin-left: -255px;margin-top: -255px;}
+.b-t{position: absolute;z-index: 10;width: 400px;height: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -200px;}
 .banner-title{ width:100%; height:100%; left:0; top:0; position:absolute; background: url(../image/bt-bg.png) no-repeat;background-size: 100%; z-index: 1;
     -webkit-animation: spinner 3s infinite linear;
     animation: spinner 3s infinite linear;}
 .banner-title1{width:100%; height:100%; position:absolute; top:0; left:0;}
-.banner-title1 p:nth-child(1){font-size: 22px;color: #FFFFFF;font-weight: bold;text-align: center;margin-top: 200px;}
-.banner-title1 p:nth-child(2){font-size: 40px;color: #FFFFFF;font-weight: bold;text-align: center;margin-top: 20px;}
+.banner-title1 p:nth-child(1){font-size: 22px;color: #FFFFFF;font-weight: bold;text-align: center;margin-top: 160px;}
+.banner-title1 p:nth-child(2){font-size: 36px;color: #FFFFFF;font-weight: bold;text-align: center;margin-top: 16px;}
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);

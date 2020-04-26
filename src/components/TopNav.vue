@@ -73,12 +73,12 @@
         </div>
         <div class="col-md-3 col-sm-3 ft-tel">
           <img src="../assets/statics/images/ft-tel.png" class="fl img-responsive">
-          <div class="fl">联系电话：<br>18013839102</div>
+          <div class="fl">联系电话：18013839102</div>
         </div>
         <div class="col-md-3 col-sm-3 ft-lefter">
-          <img src="../assets/picture/logo.png"><br> </div>
-        <div class="col-md-3 col-sm-3 ft-righter">
-          <img src="../assets/picture/ewm.png"><br> </div>
+          <img class="img1" src="../assets/picture/logo.png">
+          <img class="img2" src="../assets/picture/ewm.png">
+        </div>
       </div>
 
     </div>
@@ -235,12 +235,12 @@
 
   .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .ft-tel{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .footer .ft-box {
@@ -249,18 +249,20 @@
   }
 
   .ft-tel img {
-    width: 65px !important;
+    width: 74px !important;
+    
   }
 
   .ft-left img {
     width: 129px !important;
   }
-  .ft-lefter img {
+  .ft-lefter .img1 {
     width: 129px !important;
   }
 
-  .ft-righter img {
+  .img2 {
     width: 70px !important;
+    margin-left: 30px;
   }
 
   .ft-righter{
@@ -289,12 +291,12 @@
     text-align: center;
     color: #666;
     padding: 0;
-    border-right: 1px solid #919191;
+    /* border-right: 1px solid #919191; */
   }
 
   .ft-tel div {
-    margin-left: 15px;
-    padding: 6px 0 0;
+    /* padding-left: 15px; */
+    padding: 25px 0 0 15px;
   }
   .ft-left{
     padding-top: 15px;
