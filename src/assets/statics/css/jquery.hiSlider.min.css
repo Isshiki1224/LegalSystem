@@ -1,0 +1,66 @@
+﻿.hiSlider-pages,
+.hiSlider-title {
+	position: absolute;
+	z-index: 3
+}
+
+.hiSlider-btn-prev,
+.hiSlider-btn-next {
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	height: 30px;
+	width: 30px;
+	background: url(../images/hislider-arrow.png) no-repeat;
+	margin-top: -15px;
+	text-indent: -200px;
+	overflow: hidden;
+}
+
+.hiSlider-btn-prev {
+	left: 10px
+}
+
+.hiSlider-btn-next {
+	right: 10px;
+	background-position: -30px 0
+}
+
+.hiSlider-btn-prev:hover,
+.hiSlider-btn-next:hover {
+	opacity: 1;
+	filter: alpha(opacity: 100)
+}
+
+.hiSlider-title {
+	bottom: 0;
+	width: 100%;
+	padding: 6px 0;
+	color: #fff;
+	text-indent: 10px;
+	background: rgba(0, 0, 0, .6);
+	z-index: 2;
+	font: 14px/2 "Microsoft YaHei", Arial, Tahoma
+}
+
+.hiSlider-pages {
+	bottom: 10px;
+	left: 50%;
+	width: 50%;margin-left: -25%;
+	text-align: center
+}
+
+.hiSlider-pages a {
+	height: 3px;
+	width: 40px;
+	margin: 0 6px;
+	display: inline-block;
+	overflow: hidden;
+	text-indent: -100px;
+	font-size: 0;
+	background: #fff
+}
+
+.hiSlider-pages a.active {
+	background: #999
+}

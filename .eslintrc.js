@@ -14,6 +14,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
+    'no-irregular-whitespace' : 'off', 
     'no-trailing-spaces': 0,
     'space-before-function-paren': 0,
     indent: ['off', 2],

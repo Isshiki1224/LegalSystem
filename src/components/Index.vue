@@ -1,186 +1,259 @@
 <template>
-    <div>
-      <div id="slideBox" class="slideBox clear">
-        <div class="bd">
-            <ul>
+  <div>
+    <div id="slideBox" class="slideBox clear">
+      <div class="bd">
+        <ul>
+          <li>
+            <img src="../assets/picture/banner5.jpg">
+            <div class="b-t">
+              <div class="banner-title"></div>
+              <div class="banner-title1">
+                <p></p>
+                <p>专业 融合 创新 共赢</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dynamic">
+      <div class="dynamic-nav w11">
+        <div class="dynamic-title wow fadeInLeft" data-wow-duration="2s">
+          <h3>新闻中心</h3>
+          <span class="en-title">dynamic</span>
+          <p>DYNAMIC</p>
+          <div class="dynamic-more">
+            <router-link to="newsNav">
+              <span class="sp1">MORE</span>
+              <span class="sp2"></span>
+              <span class="sp3"></span>
+              <span class="sp4"></span>
+            </router-link>
+          </div>
+        </div>
+        <div class="dynamic-message wow fadeInRight" data-wow-duration="2s">
+          <div class="picScroll-left">
+            <div class="bd">
+              <ul class="picList">
                 <li>
-                    <img src="../assets/picture/banner3.jpg">
-                    <div class="b-t">
-                    <div class="banner-title"></div>
-                    <div class="banner-title1">
-                     <p>CREATIVE THINKING</p>
-                        <p>专业 融合 创新 共赢</p>
+                  <router-link :to="{path: '/newsDetail1', query: { id: cNews[0].id, path: '/news1' }}">
+                    <div class="dynamic-message-nav">
+                      <div class="dynamic-img">
+                        <img :src="newsPic(cNews[0].filePath)">
+                      </div>
+                      <h4>{{cNews[0].title}}</h4>
+                      <p>{{cNews[0].synopsis}}</p>
                     </div>
-                    </div>
+                  </router-link>
                 </li>
-            </ul>
-        </div>
-      </div>
-      <div class="dynamic">
-        <div class="dynamic-nav w11">
-            <div class="dynamic-title wow fadeInLeft" data-wow-duration="2s">
-                <h3>新闻中心</h3>
-                <span class="en-title">dynamic</span>
-                <p>DYNAMIC</p>
-                <div class="dynamic-more">
-                    <a href="news-1.html">
-                        <span class="sp1">MORE</span>
-                        <span class="sp2"></span>
-                        <span class="sp3"></span>
-                        <span class="sp4"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="dynamic-message wow fadeInRight" data-wow-duration="2s">
-                <div class="picScroll-left">
-                    <!--<div class="hd">
-            <a class="next"></a>
-            <ul></ul>
-            <a class="prev"></a>
-            <span class="pageState"></span>
-          </div>-->
-                    <div class="bd">
-                        <ul class="picList">                    
-                                    <li>
-                                        <a href="detail-254_2.html">
-                                            <div class="dynamic-message-nav">
-                                                <div class="dynamic-img">
-                                                    <img src="../assets/picture/20200228095936.png">
-                                                </div>
-                                                <h4>国家应急体系建设'十四五'规划设计若干思考</h4>
-                                                <p>
-                                                    摘要：应急科学与工程知识体系对于应急体系规划设计具有一定学理支撑。首先阐明应急科学与工程知识体系框架，包括其来龙去脉、框架设计思路及现实应用价值。然后，依据应急科学与工程知识体系主体思路，依照规划设计框架，提出国家突发事件应急体系建设&#39;十四五&#39;规划（2021-2025年）设计若干思考...
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                
-                                    <li>
-                                        <a href="detail-253_1.html">
-                                            <div class="dynamic-message-nav">
-                                                <div class="dynamic-img">
-                                                    <img src="../assets/picture/20200228095116.png">
-                                                </div>
-                                                <h4>我司圆满完成《江苏省突发事件总体应急预案》和《江苏省重特大生产安全事故应急预案》修订工作</h4>
-                                                <p>
-                                                    为应对江苏省当前新的风险形势、应急管理需求以及机构改革后全新的应急系统条块布局，2019年我司受江苏省应急管理厅委托，开展《江苏省突发事件总体应急预案》和《江苏省生产安全事故应急预案》的修订工作。经过深度调研访谈，法律法规细节查证、多轮意见征求、打磨文字、专家论证、意见说明、程序法审等多项环节，目前...
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-  
-                        </ul>
+                <li>
+                  <router-link :to="{path: '/newsDetail1', query: { id: nNews[0].id }}">
+                    <div class="dynamic-message-nav">
+                      <div class="dynamic-img">
+                        <img :src="newsPic(nNews[0].filePath)">
+                      </div>
+                      <h4>{{nNews[0].title}}</h4>
+                      <p>{{nNews[0].synopsis}}</p>
                     </div>
-                </div>
+                  </router-link>
+                </li>
+              </ul>
             </div>
-        </div>
-      </div>
-      <div class="service wow fadeInDown" data-wow-duration="2s">
-      <div class="service-nav w11">
-          <h3>服务领域</h3>
-          <span>service</span>
-          <ul>
-              <li>
-                  <a href="service-0.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw1.png">
-                      </div>
-                      <p>生态环境</p>
-                  </a>
-              </li>
-              <li>
-                  <a href="service-1.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw2.png">
-                      </div>
-                      <p>风险与应急</p>
-                  </a>
-              </li>
-              <li>
-                  <a href="service-2.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw3.png">
-                      </div>
-                      <p>节能低碳</p>
-                  </a>
-              </li>
-              <li>
-                  <a href="service-3.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw4.png">
-                      </div>
-                      <p>循环经济</p>
-                  </a>
-              </li>
-              <li>
-                  <a href="service-4.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw5.png">
-                      </div>
-                      <p>能源管理</p>
-                  </a>
-              </li>
-              <li>
-                  <a href="service-5.html">
-                      <div class="service-img">
-                          <img src="../assets/picture/fw6.png">
-                      </div>
-                      <p>自然资源</p>
-                  </a>
-              </li>
-          </ul>
-      </div>
-      </div>
-      <div class="results">
-        <div class="results-nav w11">
-            <div class="results-left wow fadeInLeft" data-wow-duration="2s">
-                <h3>服务案例</h3>
-                <span>results</span>
-                <p>自公司成立以来，积极参与江苏省推动循环化改造、推进节能绿色发展、落实环境管理标准化及提升风险管控能力等各项工作，已主持开展包括江苏省“十三五”突发事件应急体系建设规划阶段评估、江苏省环境管理标准化规范编制区域/化工园区循环化改造规划方案设计、生态工业园区建设规划、突发事件应急管理能力提升培训、企业/建设项目节能评估及资源综合利用方案设计等数十个定制化咨询服务项目，获得业主及各相关方的广泛认可。</p>
-                <a href="cases-3.html">查看更多</a>
-            </div>
-            <div class="results-right wow fadeInRight" data-wow-duration="2s">
-                <div class="txtScroll-top">
-                    <!--<div class="hd">
-          <a class="next"></a>
-          <ul></ul>
-          <a class="prev"></a>
-          <span class="pageState"></span>
-        </div>-->
-                    <div class="bd">
-                        <ul class="infoList">
-                                    <li>
-                                        <a href="detail-218_9.html">
-                                            <span style="display: none;" class="results-date">2019-04-08</span>
-                                            <p class="results-title">1、江苏省重点骨干企业“双创”平台示范工程申报</p>
-                                        </a>
-                                    </li>
-                                
-                                    <li>
-                                        <a href="detail-217_9.html">
-                                            <span style="display: none;" class="results-date">2019-04-08</span>
-                                            <p class="results-title">2、国家新型工业化产业示范基地申报</p>
-                                        </a>
-                                    </li>
-                                
-                                    <li>
-                                        <a href="detail-216_9.html">
-                                            <span style="display: none;" class="results-date">2019-04-08</span>
-                                            <p class="results-title">3、国家小型微型企业创业创新示范基地申报</p>
-                                        </a>
-                                    </li>
-                                
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  </script>
+    <div class="service wow fadeInDown" data-wow-duration="2s">
+      <div class="service-nav w11">
+        <h3>解决方案</h3>
+        <span>service</span>
+        <ul style="display: flex;
+        justify-content: center;">
+          <li v-for="(item,index) in serviceObj" :key="index">
+            <router-link to="/serviceNav">
+              <div class="service-img" style="margin: 0 auto;">
+                <img :src="item.src">
+              </div>
+              <p>{{item.name}}</p>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="results">
+      <div class="results-nav w11">
+        <h3>典型项目</h3>
+        <span>project</span>
+        <div>
+          <el-carousel :interval="4000" type="card" height="230px" indicator-position="none">
+            <el-carousel-item v-for="(item,index) in project" :key="index" >
+              <router-link :to="{path: 'projectDetail' , query: { id: item.id }}">
+                <img :src="pic(item.filePath)" width="100%" height="100%">
+                <p>{{item.title}}</p>
+              </router-link>
+            </el-carousel-item>
+          </el-carousel>
+          <router-link to="/caseNav" class="vedio-more">典型项目</router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
-  <style lang="less" scoped>
-  </style>
+<script>
+  export default {
+    // 过滤器
+    filters: {
+      ellipsis(value) {
+        if (!value) return ''
+        if (value.length > 32) {
+          return value.slice(0, 32) + '...'
+        }
+        return value
+      }
+    },
+    data() {
+      return {
+        serviceObj: [{
+            id: 0,
+            path: '/service-0',
+            src: require('../assets/picture/fw1.png'),
+            name: '风险评估'
+          },
+          {
+            id: 1,
+            path: '/service-1',
+            src: require('../assets/picture/fw2.png'),
+            name: '安全研究'
+          },
+          {
+            id: 2,
+            path: '/service-2',
+            src: require('../assets/picture/fw3.png'),
+            name: '咨询服务'
+          },
+          {
+            id: 3,
+            path: '/service-3',
+            src: require('../assets/picture/fw4.png'),
+            name: '应急咨询'
+          },
+          {
+            id: 4,
+            path: '/service-4',
+            src: require('../assets/picture/fw5.png'),
+            name: '软件开发'
+          }
+        ],
+        cNews: [],
+        nNews: [],
+        project: [],
+        queryInfo: {
+          searchContent: '',
+          pageNum: 1,
+          pageSize: 10,
+          category: ''
+        }
+      }
+    },
+    created() {
+      this.getProject()
+    },
+    methods: {
+      async getProject() {
+        const {
+          data: res
+        } = await this.$http.get('http://40.73.72.56:1311/newsManagement/news', {
+          params: this.queryInfo
+        })
+        const allList = res.data
+        allList.some((item, i) => {
+          if (item.category === '典型项目') {
+            this.project.push(item)
+          }
+          if (item.category === '企业新闻') {
+            this.cNews.push(item)
+          }
+          if (item.category === '最新政策') {
+            this.nNews.push(item)
+          }
+        })
+      },
+      pic(filePath) {
+        return 'http://40.73.72.56:1311/newsManagement/' + filePath
+      },
+      newsPic(filePath) {
+        return 'http://40.73.72.56:1311/newsManagement/' + filePath
+      }
+    }
+  }
+
+</script>
+
+<style lang="less" scoped>
+  .results-nav h3 {
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .results-nav span {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #6d6d6d;
+    opacity: 0.68;
+    margin-bottom: 20px;
+  }
+
+  .results {
+    margin: 40px 0;
+  }
+
+  .el-carousel {
+    margin: 0 auto;
+    width: 68%;
+  }
+
+  .el-carousel__item {
+    width: 50%;
+  }
+
+  .el-carousel__item p {
+    text-align: center;
+    color: white;
+    position: absolute;
+    z-index: 999;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+
+  .vedio-more {
+    font-size: 16px;
+    color: #777;
+    padding: 10px 0;
+    border: 2px solid #777;
+    display: block;
+    margin: 70px auto 0;
+    text-align: center;
+    width: 188px;
+    clear: both;
+  }
+
+</style>

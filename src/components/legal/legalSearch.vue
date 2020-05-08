@@ -49,8 +49,11 @@
                         <h3 style="width: 100%;">
                           <router-link :to="{path: '/legalDetail', query: { id: item.id }}">{{item.title}}</router-link>
                         </h3>
-                        <div class="searInfo">发布部门: {{item.office}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布时间:
-                          {{item.publicDate}}
+                        <div class="searInfo">
+                          <span style="margin: 10px;">发布部门: {{item.office}}</span>
+                          <span style="margin: 10px;">发布时间:{{item.publicDate}}</span>
+                          <span style="margin: 10px;">施行时间:{{item.executeDate}}</span>
+                          <span style="margin: 10px;">门类: {{item.category}}</span>
                         </div>
                       </td>
                     </tr>
@@ -104,7 +107,10 @@
           searchContent: '',
           pageNum: 1,
           kind: '全库',
-          pageSize: 10
+          synthesize: '',
+          waterway: '',
+          road: '',
+          pageSize: 20
         },
         total: 0
       }
@@ -114,7 +120,6 @@
     },
     methods: {
       getClass(index) {
-        console.log(index)
         this.queryInfo.kind = index
       },
       async getLegalList() {
@@ -124,11 +129,9 @@
           }
           const {
             data: res
-          } = await this.$http.get('SearchLawTitle', {
-            params: this.queryInfo
-          })
-          console.log(res)
-          console.log(res.date[0].id)
+          } = await this.$http.post('SearchLawTitle',
+            this.queryInfo
+          )
           this.legalList = res.date
           this.total = res.totalPage
         }
@@ -139,20 +142,42 @@
           }
           const {
             data: res1
-          } = await this.$http.get('SearchLaw', {
-            params: this.queryInfo
-          })
-          console.log(res1)
+          } = await this.$http.post('SearchLaw',
+            this.queryInfo
+          )
+
+          this.legalList = res1.date
+          this.total = res1.totalPage
+        }
+      },
+      async getLegalList1() {
+        if (this.picked === 'a') {          
+          const {
+            data: res
+          } = await this.$http.post('SearchLawTitle',
+            this.queryInfo
+          )
+          this.legalList = res.date
+          this.total = res.totalPage
+        }
+
+        if (this.picked === 'b') {
+          const {
+            data: res1
+          } = await this.$http.post('SearchLaw',
+            this.queryInfo
+          )
+
           this.legalList = res1.date
           this.total = res1.totalPage
         }
       },
       handleCurrentChange(newPage) {
-        this.queryInfo.pageNum = newPage
-        this.getLegalList()
-      }
+      this.queryInfo.pageNum = newPage
+      this.getLegalList1()
     }
-  }
+    }
+  }  
 
 </script>
 

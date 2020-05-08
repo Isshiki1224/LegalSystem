@@ -6,13 +6,13 @@
           <img src="../assets/picture/logo.png">
           <div class="company-name">
             <p>中交安科（南京）安全咨询有限公司</p>
-            <p>zhongjiaoanke  Security consulting co., LTD</p>
+            <p>ChinaTrans Safety Consulting (Nanjing) Co., Ltd</p>
           </div>
         </div>
         <div class="header-right">
           <ul>
             <li>
-              <router-link to="/index" exact>首页</router-link>
+              <router-link to="/index">首页</router-link>
             </li>
             <li id="about" @mouseenter="enter1" @mouseleave="leave1">
               <router-link to="/aboutNav">关于我们</router-link>
@@ -25,7 +25,7 @@
               </div>
             </li>
             <li id="ser" @mouseenter="enter2" @mouseleave="leave2">
-                <router-link to="/serviceNav">服务领域</router-link>
+              <router-link to="/serviceNav">解决方案</router-link>
               <div id="subnav1" v-bind:style='displayStyle2'>
                 <div class="sub2">
                   <dl v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
@@ -35,28 +35,24 @@
               </div>
             </li>
             <li id="news" @mouseenter="enter3" @mouseleave="leave3">
-                <router-link to="/newsNav">新闻中心</router-link>
+              <router-link to="/newsNav">新闻中心</router-link>
               <div id="subnav2" v-bind:style='displayStyle3'>
                 <div class="sub2">
-                    <dl v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
-                        <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-                      </dl>
-                </div>
-              </div>
-            </li>
-            <li id="case" @mouseenter="enter4" @mouseleave="leave4">
-                <router-link to="/caseNav">服务案例</router-link>
-              <div id="subnav3" v-bind:style='displayStyle4'>
-                <div class="sub2">
-                  <dl v-for="item in caseObj" :key="item.id" @click="getChildClass(item.id)">
-                    <router-link to="/caseNav">{{item.name}}</router-link>
+                  <dl v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
+                    <router-link :to="{ path: item.path }">{{item.name}}</router-link>
                   </dl>
                 </div>
               </div>
             </li>
-            <li id="hr"><router-link to="/legalSearch">法律法规</router-link>
+            <li id="case">
+              <router-link to="/caseNav">典型项目</router-link>
             </li>
-            <li><router-link to="/content">联系我们</router-link></li>
+            <li id="hr">
+              <router-link to="/legalSearch">法律法规</router-link>
+            </li>
+            <li>
+              <router-link to="/content">联系我们</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -64,50 +60,27 @@
     <div class="main">
       <router-view ref="child"></router-view>
     </div>
-    <div class="footer">
-      <div class="footer-nav w11">
-        <div class="footer-left">
-          <h3>中交安科</h3>
-          <div class="footer-list">
-            <dl>
-              <dt>
-                <router-link to="/gsjj">关于我们</router-link>
-              </dt>
-              <dd v-for="(item) in aboutObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-              </dd>
-            </dl>
-            <dl>
-              <dt><router-link to="/serviceNav">服务领域</router-link></dt>
-              <dd v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link to="serviceNav">{{item.name}}</router-link>
-              </dd>
-
-            </dl>
-            <dl>
-              <dt><router-link to="/newsNav">新闻中心</router-link></dt>
-              <dd v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-              </dd>
-            </dl>
-            <dl>
-              <dt><router-link to="/caseNav">服务案例</router-link></dt>
-              <dd v-for="item in caseObj" :key="item.id" @click="getChildClass(item.id)">
-                <router-link to="/caseNav">{{item.name}}</router-link>
-              </dd>
-            </dl>
-
-          </div>
+    <!--底部-->
+    <div class="footer hidden-xs">
+      <div class="row ft-box">
+        <div class="col-md-6 col-sm-6 ft-left">
+          <a href="#">公司地图</a>
+          <a href="#">法律声明</a>
+          <a href="#">联系方式</a>
+          <a href="#">举报热线</a>
+          <p>备案号:
+            <a href="javascript:window.open('http://beian.miit.gov.cn/');" target="_blank">苏ICP备20020409号</a></p>
         </div>
-        <div class="footer-right">
-          <img class="footer-logo" src="../assets/picture/logo.png">
-          <p>公司地址：<span>南京市栖霞区兴智科技园A座13楼</span></p>
-          <p>招聘热线：<span>025-52316787</span>、<span>13585118072</span></p>
-          <p>合作热线：<span>025-52336878</span>、<span>18914580001</span></p>
-          <p>备案号：<span>苏ICP备19001203号-1</span></p>
-          <img class="ewm" src="../assets/picture/ewm.png">
+        <div class="col-md-3 col-sm-3 ft-tel">
+          <img src="../assets/statics/images/ft-tel.png" class="fl img-responsive">
+          <div class="fl">联系电话：18013839102</div>
+        </div>
+        <div class="col-md-3 col-sm-3 ft-lefter">
+          <img class="img1" src="../assets/picture/logo.png">
+          <img class="img2" src="../assets/picture/ewm.png">
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -124,9 +97,6 @@
           display: 'none'
         },
         displayStyle3: {
-          display: 'none'
-        },
-        displayStyle4: {
           display: 'none'
         },
         aboutObj: [{
@@ -149,39 +119,29 @@
         serviceObj: [{
             id: 0,
             path: '/service-0',
-            name: '生态环境'
+            name: '风险评估'
           },
           {
             id: 1,
             path: '/service-1',
-            name: '风险与应急'
+            name: '安全研究'
           },
           {
             id: 2,
             path: '/service-2',
-            name: '节能低碳'
+            name: '咨询服务'
           },
           {
             id: 3,
             path: '/service-3',
-            name: '循环经济'
+            name: '应急咨询'
           },
           {
             id: 4,
             path: '/service-4',
-            name: '能源管理'
-          },
-          {
-            id: 5,
-            path: '/service-5',
-            name: '自然资源'
-          },
-          {
-            id: 6,
-            path: '/service-6',
-            name: '其他'
+            name: '软件开发'
           }
-        ], 
+        ],
         newsObj: [{
             id: 0,
             path: '/news2',
@@ -192,43 +152,7 @@
             path: '/news1',
             name: '企业新闻'
           }
-        ], 
-        caseObj: [{
-              id: 0,
-              path: '/case3',
-              name: '生态环境'
-            },
-            {
-              id: 1,
-              path: '/case4',
-              name: '风险与应急'
-            },
-            {
-              id: 2,
-              path: '/case5',
-              name: '节能低碳'
-            },
-            {
-              id: 3,
-              path: '/case6',
-              name: '循环经济'
-            },
-            {
-              id: 4,
-              path: '/case7',
-              name: '能源管理'
-            },
-            {
-              id: 5,
-              path: '/case8',
-              name: '自然资源'
-            },
-            {
-              id: 6,
-              path: '/case9',
-              name: '其他'
-            }
-          ]
+        ]
       }
     },
     methods: {
@@ -250,12 +174,6 @@
       leave3: function () {
         this.displayStyle3.display = 'none'
       },
-      enter4: function () {
-        this.displayStyle4.display = 'block'
-      },
-      leave4: function () {
-        this.displayStyle4.display = 'none'
-      },
       getChildClass: function (index) {
         this.$refs.child.getClass(index)
       }
@@ -265,5 +183,84 @@
 </script>
 
 <style lang="less" scoped>
+  .footer {
+    background: #efefef;
+    padding: 50px 0;
+    margin-top: 70px;
+    clear: both;
+
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ft-tel{
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer .ft-box {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .ft-tel img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .ft-left img {
+    width: 129px !important;
+  }
+  .ft-lefter .img1 {
+    width: 129px !important;
+    padding-bottom: 10px;
+  }
+
+  .img2 {
+    width: 70px !important;
+    margin-left: 30px;
+  }
+
+  .ft-righter{
+    margin-left: 15px;
+  }
+  .ft-lefter{
+    /* margin-left: 15px; */
+    /* padding-top: 15px; */
+  }
+
+  .footer .ft-box a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  .footer .ft-box p {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0 0;
+  }
+
+  .ft-tel {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+    padding: 0 50px;
+    border-right: 1px solid #919191;
+    border-left: 1px solid #919191;
+  }
+
+  .ft-tel div {
+    /* padding-left: 15px; */
+    padding: 20px 0 0 15px;
+  }
+  .ft-left{
+    padding-top: 18px;
+  }
 
 </style>
