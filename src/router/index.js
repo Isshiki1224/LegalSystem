@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Index from '../components/Index.vue'
 import TopNav from '../components/TopNav.vue'
+import privacy from '../components/privacy.vue'
 
 // const TopNav = () => import(/* webpackChunkName: "TopNav_Index" */ '../components/TopNav.vue')
 // const Index = () => import(/* webpackChunkName: "TopNav_Index" */ '../components/Index.vue')
@@ -57,6 +58,9 @@ const routes = [
 {
 path: '/', redirect: '/topNav'
 },
+{
+  path: '/privacy', component: privacy
+  },
 {
   path: '/topNav', 
   component: TopNav, 

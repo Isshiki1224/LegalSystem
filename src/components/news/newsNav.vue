@@ -35,6 +35,11 @@
         current: '/news2'
       }
     },
+    created() {
+      if (this.$route.query.path !== undefined) {
+        this.current = this.$route.query.path
+      }     
+    },
     methods: {
       getClass: function (index) {
         this.current = index

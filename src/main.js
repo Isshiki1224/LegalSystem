@@ -8,6 +8,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'bootstrap'
 import axios from 'axios'
 
+import VueQuillEditor from 'vue-quill-editor'
+
+// require styles
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
 import BaiduMap from 'vue-baidu-map'
     Vue.use(BaiduMap, {
           /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
@@ -15,6 +22,7 @@ import BaiduMap from 'vue-baidu-map'
     })
 
 Vue.use(ElementUI)
+Vue.use(VueQuillEditor)
 axios.defaults.baseURL = 'http://40.73.72.56:1311/nacos-provide'
 Vue.prototype.$http = axios
 

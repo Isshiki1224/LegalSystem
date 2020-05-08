@@ -107,7 +107,10 @@
           searchContent: '',
           pageNum: 1,
           kind: '全库',
-          pageSize: 10
+          synthesize: '',
+          waterway: '',
+          road: '',
+          pageSize: 20
         },
         total: 0
       }
@@ -126,9 +129,9 @@
           }
           const {
             data: res
-          } = await this.$http.get('SearchLawTitle', {
-            params: this.queryInfo
-          })
+          } = await this.$http.post('SearchLawTitle',
+            this.queryInfo
+          )
           this.legalList = res.date
           this.total = res.totalPage
         }
@@ -139,20 +142,42 @@
           }
           const {
             data: res1
-          } = await this.$http.get('SearchLaw', {
-            params: this.queryInfo
-          })
+          } = await this.$http.post('SearchLaw',
+            this.queryInfo
+          )
+
+          this.legalList = res1.date
+          this.total = res1.totalPage
+        }
+      },
+      async getLegalList1() {
+        if (this.picked === 'a') {          
+          const {
+            data: res
+          } = await this.$http.post('SearchLawTitle',
+            this.queryInfo
+          )
+          this.legalList = res.date
+          this.total = res.totalPage
+        }
+
+        if (this.picked === 'b') {
+          const {
+            data: res1
+          } = await this.$http.post('SearchLaw',
+            this.queryInfo
+          )
 
           this.legalList = res1.date
           this.total = res1.totalPage
         }
       },
       handleCurrentChange(newPage) {
-        this.queryInfo.pageNum = newPage
-        this.getLegalList()
-      }
+      this.queryInfo.pageNum = newPage
+      this.getLegalList1()
     }
-  }
+    }
+  }  
 
 </script>
 

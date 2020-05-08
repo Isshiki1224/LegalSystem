@@ -64,10 +64,10 @@
     <div class="footer hidden-xs">
       <div class="row ft-box">
         <div class="col-md-6 col-sm-6 ft-left">
-          <a href="">公司地图</a>
-          <a href="">法律声明</a>
-          <a href="">联系方式</a>
-          <a href="">举报热线</a>
+          <a href="#">公司地图</a>
+          <a href="#">法律声明</a>
+          <a href="#">联系方式</a>
+          <a href="#">举报热线</a>
           <p>备案号:
             <a href="javascript:window.open('http://beian.miit.gov.cn/');" target="_blank">苏ICP备20020409号</a></p>
         </div>
@@ -82,49 +82,6 @@
       </div>
 
     </div>
-    <!-- <div class="footer">
-      <div class="footer-nav w11">
-        <div class="footer-left">
-          <h3>中交安科</h3>
-          <div class="footer-list">
-            <dl>
-              <dt>
-                <router-link to="/gsjj">关于我们</router-link>
-              </dt>
-              <dd v-for="(item) in aboutObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <router-link to="/serviceNav">解决方案</router-link>
-              </dt>
-              <dd v-for="item in serviceObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link to="serviceNav">{{item.name}}</router-link>
-              </dd>
-
-            </dl>
-            <dl>
-              <dt>
-                <router-link to="/newsNav">新闻中心</router-link>
-              </dt>
-              <dd v-for="item in newsObj" :key="item.id" @click="getChildClass(item.path)">
-                <router-link :to="{ path: item.path }">{{item.name}}</router-link>
-              </dd>
-            </dl>
-
-          </div>
-        </div>
-        <div class="footer-right">
-          <img class="footer-logo" src="../assets/picture/logo.png" width="251" height="71">
-          <p>公司地址：<span>南京市栖霞区兴智科技园A座13楼</span></p>
-          <p>招聘热线：<span>18013839120</span></p>
-          <p>合作热线：<span>18013839120</span></p>
-          <p>备案号：<span></span></p>
-          <img class="ewm" src="../assets/picture/ewm.png">
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -229,16 +186,18 @@
   .footer {
     background: #efefef;
     padding: 50px 0;
+    margin-top: 70px;
     clear: both;
 
   }
 
   .row {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .ft-tel{
+    margin: 0 50px;
     display: flex;
     justify-content: space-around;
   }
@@ -249,8 +208,8 @@
   }
 
   .ft-tel img {
-    width: 74px !important;
-    
+    width: 70px !important;
+    height: 70px !important;
   }
 
   .ft-left img {
@@ -258,6 +217,7 @@
   }
   .ft-lefter .img1 {
     width: 129px !important;
+    padding-bottom: 10px;
   }
 
   .img2 {
@@ -269,8 +229,8 @@
     margin-left: 15px;
   }
   .ft-lefter{
-    margin-left: 15px;
-    padding-top: 15px;
+    /* margin-left: 15px; */
+    /* padding-top: 15px; */
   }
 
   .footer .ft-box a {
@@ -280,26 +240,27 @@
   }
 
   .footer .ft-box p {
-    font-size: 12px;
+    font-size: 18px;
     color: #666;
     margin: 5px 0 0;
   }
 
   .ft-tel {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     color: #666;
-    padding: 0;
-    /* border-right: 1px solid #919191; */
+    padding: 0 50px;
+    border-right: 1px solid #919191;
+    border-left: 1px solid #919191;
   }
 
   .ft-tel div {
     /* padding-left: 15px; */
-    padding: 25px 0 0 15px;
+    padding: 20px 0 0 15px;
   }
   .ft-left{
-    padding-top: 15px;
+    padding-top: 18px;
   }
 
 </style>

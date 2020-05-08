@@ -2,17 +2,17 @@
     <div>
       <div class="news-all">
         <ul>
-          <li v-for="item in currentPageData" :key="item.id">
-            <router-link :to="{ path: item.path }">
+          <li v-for="(item,index) in cNews" :key="index">
+            <router-link :to="{ path: '/newsDetail1', query: { id: item.id } }">
               <div class="w11">
-                <div class="news-left">
-                  <img :src="item.src">
+                <div class="news-left" style="height: 100%;">
+                  <img :src="pic(item.filePath)">
                 </div>
                 <div class="news-right">
                   <h3>{{item.title}}</h3>
                   <span style="display: none;">{{item.date}}</span>
                   <p>
-                    {{item.summary}}
+                    {{item.synopsis}}
                   </p>
                 </div>
               </div>
@@ -46,10 +46,18 @@
           totalPage: 1, // 统共页数，默认为1
           currentPage: 1, // 当前页数 ，默认为1
           pageSize: 8, // 每页显示数量
-          currentPageData: [] // 当前页显示内容
+          currentPageData: [], // 当前页显示内容
+          cNews: [],
+          queryInfo: {
+          searchContent: '',
+          pageNum: 1,
+          pageSize: 10,
+          category: '企业新闻'
+        }
         }
       },
       created() {
+        this.getNews1List()
         // 计算一共有几页
         this.totalPage = Math.ceil(this.news1List.length / this.pageSize)
         // 计算得0时设置为1
@@ -65,7 +73,19 @@
         handleCurrentChange(newPage) {
           this.currentPage = newPage
           this.getCurrentPageData()
-        }
+        },
+        async getNews1List() {
+        const {
+          data: res
+        } = await this.$http.get('http://40.73.72.56:1311/newsManagement/news', {
+          params: this.queryInfo
+        })
+        this.cNews = res.data
+        this.total = res.totalPage
+      },
+      pic(filePath) {
+        return 'http://40.73.72.56:1311/newsManagement/' + filePath
+      }
       }
     }
   
