@@ -6,6 +6,14 @@
         <span class="span1">{{currentNews.publicDate}}</span>
         <div class="ql-editor" v-html="currentNews.content">
         </div>
+        <div>
+          <hr>
+          <br>
+          <label>附件下载(点击标题下载):</label><br>
+          <br>
+          <a :href="downloadUrl" style="font-size: 20px;" v-if="isAppendix">{{appendixTitle}}</a>
+          <label style="font-size: 20px;" v-if="!isAppendix">暂无附件下载</label>
+        </div>
       </div>
     </div>
   </div>
@@ -16,7 +24,11 @@
     data() {
       return {
         currentNews: {},
-        currentId: ''
+        currentId: '',
+        filePath: '',
+        downloadUrl: '',
+        appendixTitle: '',
+        isAppendix: false
       }
     },
     created() {
@@ -33,6 +45,12 @@
           }
         })
         this.currentNews = res.data
+        if (this.currentNews.appendix.title !== '') {
+          this.isAppendix = true
+          this.filePath = this.currentNews.appendix.filePath
+          this.appendixTitle = this.currentNews.appendix.title
+          this.downloadUrl = 'http://40.73.72.56:1311/newsManagement/download?filePath=' + this.filePath
+        }
       }
     }
   }

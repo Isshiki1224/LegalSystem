@@ -68,8 +68,24 @@
           <a href="#">法律声明</a>
           <a href="#">联系方式</a>
           <a href="#">举报热线</a>
-          <p>备案号:
-            <a href="javascript:window.open('http://beian.miit.gov.cn/');" target="_blank">苏ICP备20020409号</a></p>
+
+          <!-- style="width:300px;margin:0 auto; padding:20px 0;" -->
+          <div>
+
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011302320921"
+              style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+              <img src="../assets/image/备案图标.png" class="beiAnImg">
+              <p style="float:left;height:20px;line-height:20px;">苏公网安备
+                32011302320921号</p>
+            </a>
+
+            <a href="http://beian.miit.gov.cn/" target="_blank"
+              style="display:block;">
+              <img src="../assets/image/ICP备案.png" class="icpImg">
+              <p>苏ICP备20020409号</p>
+            </a>
+
+          </div>
         </div>
         <div class="col-md-3 col-sm-3 ft-tel">
           <img src="../assets/statics/images/ft-tel.png" class="fl img-responsive">
@@ -196,7 +212,7 @@
     justify-content: center;
   }
 
-  .ft-tel{
+  .ft-tel {
     margin: 0 50px;
     display: flex;
     justify-content: space-around;
@@ -212,9 +228,20 @@
     height: 70px !important;
   }
 
-  .ft-left img {
-    width: 129px !important;
+  .icpImg {
+    float: left;
+    width: 6%;
+    padding-top: 2px;
+    margin-right: 5px;
+    
   }
+
+  .beiAnImg {
+    float: left;
+    padding-top: 5px;
+    margin-right: 5px;
+  }
+
   .ft-lefter .img1 {
     width: 129px !important;
     padding-bottom: 10px;
@@ -225,12 +252,8 @@
     margin-left: 30px;
   }
 
-  .ft-righter{
+  .ft-righter {
     margin-left: 15px;
-  }
-  .ft-lefter{
-    /* margin-left: 15px; */
-    /* padding-top: 15px; */
   }
 
   .footer .ft-box a {
@@ -259,8 +282,9 @@
     /* padding-left: 15px; */
     padding: 20px 0 0 15px;
   }
-  .ft-left{
-    padding-top: 18px;
+
+  .ft-left {
+    /* padding-top: 10px; */
   }
 
 </style>

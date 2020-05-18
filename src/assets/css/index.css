@@ -17,7 +17,7 @@ a{ text-decoration:none;color:#333;}
 .header-right{float: right;width: 60%;}
 .header-right ul{zoom: 1;}
 .header-right ul:after{display: block;content: "";clear: both;}
-.header-right ul li{float: left; width:14.285%; text-align:center; position:relative;}
+.header-right ul li{float: left; width:12%; text-align:center; position:relative;}
 .header-right ul li:last-child{margin-right: 0;}
 .header-right ul li a{font-size: 18px;color: #2d2d2d;line-height: 45px;}
 .header-right ul li a:hover{color: #6dbce9;}
